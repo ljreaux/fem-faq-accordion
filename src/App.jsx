@@ -1,5 +1,12 @@
+import Card from "./components/Card";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <div className="backdrop"></div>
+      <Card />
+    </>
+  );
 }
 
 export default App;
