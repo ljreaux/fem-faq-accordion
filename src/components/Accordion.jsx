@@ -1,4 +1,6 @@
 import { useState } from "react";
+import plus from "../assets/images/icon-minus.svg";
+import minus from "../assets/images/icon-plus.svg";
 
 export default function Accordion({ question, answer }) {
   const [clicked, setClicked] = useState(false);
@@ -7,14 +9,7 @@ export default function Accordion({ question, answer }) {
       <div className="question" onClick={() => setClicked(!clicked)}>
         <p>{question}</p>
         <button>
-          <img
-            src={
-              clicked
-                ? `src/assets/images/icon-minus.svg`
-                : `src/assets/images/icon-plus.svg`
-            }
-            alt="accordion button"
-          />
+          <img src={clicked ? plus : minus} alt="accordion button" />
         </button>
       </div>
       {/* {clicked && <p className="answer">{answer}</p>} */}
